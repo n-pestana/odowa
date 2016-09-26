@@ -75,13 +75,11 @@ if(is_file(USR_DIR . '/classes/myForm.class.php')) {
 }
 define('LIB_PATH',ROOT.'/lib/');
 define('VAR_PATH',ROOT.'/usr/'.$conf['usr'].'/var/');
-//include(ROOT.'/include/Cookies.class.php');
 $gen = new GenClass($obj['db']);
 
 
 # autocreate class from database schema, write module in file and database
 # dev only
-
 if(isset($_GET['build'])){
 	$gen->collector=$gen->buildClass();
 }
