@@ -137,16 +137,6 @@ function DetectLocale(){
         return $formated_locales;
 
 }
-/*
-        if(!isset($_SERVER["HTTP_ACCEPT_LANGUAGE"]))return array();
-	preg_match_all('|.*(..-..).*|isU',$_SERVER["HTTP_ACCEPT_LANGUAGE"],$out);
-	$formated_locales = array();
-	foreach($out[1] as $langs){
-		$formated_locales[] = strtolower(current(explode('-',$langs))).'_'.strtoupper(end(explode('-',$langs)));
-		
-	}
-	return $formated_locales;
-*/
 }
 if(!function_exists('SuppAccents')){
   function SuppAccents($chaine){
