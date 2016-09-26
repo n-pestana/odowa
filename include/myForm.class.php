@@ -114,7 +114,6 @@ class myFormV1  extends genclass {
       $hasPattern = isset($ref[$f_id]['pattern']) && $ref[$f_id]['pattern'] != '';
       $class = $hasPattern ? 'class="required formlabel"' : 'class="formlabel"';
 
-      //$label = isset($ref[$f_id]['label']) && $ref[$f_id]['label'] != ''   && $ref[$f_id]['type'] != 'hidden' && $ref[$f_id]['type'] != 'i18n'
       $label = (isset($ref[$f_id]['label']) && $ref[$f_id]['label'] != ''   && $ref[$f_id]['type'] != 'hidden')
         ? "<label ".$class." '>".$ref[$f_id]['label']."</label>" 
         : "";
@@ -177,14 +176,6 @@ class myFormV1  extends genclass {
           if($this->view_only === true) continue;
         case 'button':
           if($this->view_only === true) continue;
-          /*$out .= '<input 
-            type        ="'.$ref[$f_id]['type'].'" 
-            value       ="'.$ref[$f_id]['value'].'" 
-            onclick     ="'.$ref[$f_id]['onclick'].'"
-            class       ="'.$ref[$f_id]['class'].'"
-            style       ="'.$ref[$f_id]['style'].'"
-            />';  */
-
           $out .='<button type="'.$ref[$f_id]['type'].'" onclick     ="'.$ref[$f_id]['onclick'].'" >'.$ref[$f_id]['value'].'</button>';  
           break;
 
